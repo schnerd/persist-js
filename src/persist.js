@@ -919,12 +919,8 @@ Persist = (function() {
     flash: {
       test: function() {
         // TODO: better flash detection
-        try {
-          if (!swfobject){
-              return false;
-          }
-        } catch (e) {
-          return false;
+        if (!window.swfobject){
+            return false;
         }
 
         // get the major version
